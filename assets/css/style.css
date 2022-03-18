@@ -5,6 +5,7 @@
 
 body{
    background: var(--background);
+   color: var(--Foreground);
 
 }
 
@@ -38,7 +39,7 @@ body{
 }
 
 .title{
-   color: var(--green);
+   color: var(--pink);
    
 }
 
@@ -63,12 +64,12 @@ body{
 
 /*--------------- Skills -----------------*/
 
-.skills-section{
+.skills{
    width: 100%;
 }
 
 .skills__title{
-   color: var(--green);
+   color: var(--pink);
 }
 
 
@@ -78,17 +79,17 @@ body{
     justify-content: space-around;
     gap: 8px;
     margin-top: 6px;
+    overflow-x: scroll;
+    border: 2px solid var(--comment);
+    background: var(--current-line);
+    border-radius: 20px;
 }
 
 .skills__item{
-   background: var(--current-line);
-   border-radius: 20px;
    width: 300px;
    height: 100%;
    display: flex;
-   justify-content: center;
-   border: 2px solid var(--comment);
-   color: var(--Foreground);
+   justify-content: center;  
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -107,7 +108,29 @@ body{
    color: #264de4;
 }
 
+/*------------------- Studies --------------------*/
+
+.studies__title{
+   color: var(--pink);
+}
+
+.studies__list{
+   display: flex;
+   justify-content: space-around;
+   overflow-x: scroll;
+  
+}
+
+.studies__item{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 /*--------------- Certificates ------------------*/
+
+.certificates__title{
+   color: var(--pink);
+}
 
 .certificates__list{
    display: flex;
@@ -122,4 +145,36 @@ body{
 
 .certificates__image{
    height: 500px;
+}
+
+/*-------------------- Projects ------------------------*/
+
+.projects__title{
+   color: var(--pink);
+}
+
+.projects__list{
+   display: flex;
+   justify-content: space-around;
+   height: 250px;
+}
+
+.projects__item{
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   border: 2px solid var(--comment);
+   background: var(--current-line);
+   border-radius: 20px;
+   padding: 10px;
+   gap: 10px;
+   justify-content: space-between;
+}
+
+.tech__list{
+   display: flex;
+}
+
+.tech__item{
+   color: var(--yellow);
 }
