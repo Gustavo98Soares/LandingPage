@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- Font -->
     <script src="https://kit.fontawesome.com/67ab66b744.js" crossorigin="anonymous"></script>
+    <!-- Owl -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Css -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -40,23 +44,24 @@
         </section>  
         <section class="skills">
             <h3 class="skills__title">SKILLS</h3>
-            <ul class="skills__list">
-                <li class="skills__item skills__js">
+            <div class="skills__owl owl-carousel owl-theme">
+                <div class="item skills__owl__item">
                     <i class="fa-brands fa-js-square fa-10x fa-color"></i>
                     JavaScript    
-                    <span class="typedJs"></span>
-                </li>
-                <li class="skills__item skills__html">
-                    <i class="fa-brands fa-html5 fa-10x fa-color"></i>
-                    HTML
-                    <span class="typedHtml"></span>
-                </li>
-                <li class="skills__item skills__css">
-                    <i class="fa-brands fa-css3 fa-10x fa-color"></i>        
-                    CSS
-                    <span class="typedCss"></span>
-                </li>
-            </ul>
+                    <span class="typedJs"></span>                                                            
+                </div>
+                <div class="item skills__owl__item">
+                    <i class="fa-brands fa-html5 fa-10x fa-color"></i>                    
+                    HTML  
+                    <span class="typedHtml"></span>                                                            
+                </div>
+                <div class="item skills__owl__item">
+                    <i class="fa-brands fa-css3 fa-10x fa-color"></i>   
+                    CSS    
+                    <span class="typedCss"></span>                                                            
+                </div>
+              
+            </div>           
         </section>
         <section class="studies">
             <h3 class="studies__title">Estudos / Interesses</h3>
@@ -81,20 +86,29 @@
         </section>
         <section class="certificates">
             <h3 class="certificates__title">Principais Certificados</h3>
-            <ul class="certificates__list">
-                <li class="certificates__item">
+            <div class="certificates__owl owl-carousel owl-theme">
+                <div class="item certificates__owl__item">
                     <img class="certificates__image" src="./assets/image/b8one.jpg" alt="">
-                </li>
-                <li class="certificates__item">
-                    <img class="certificates__image" src="./assets/image/b8one.jpg" alt="">
-                </li>
-                <li class="certificates__item">
-                    <img class="certificates__image" src="./assets/image/b8one.jpg" alt="">
-                </li>
-                <li class="certificates__item">
-                    <img class="certificates__image" src="./assets/image/b8one.jpg" alt="">
-                </li>
-            </ul>
+                </div>            
+                <div class="item certificates__owl__item">
+                    <img class="certificates__image" src="./assets/image/bootcamptakeblip.jpg" alt="">
+                </div>            
+                <div class="item certificates__owl__item">
+                    <img class="certificates__image" src="./assets/image/bootcamptakeblip.jpg" alt="">
+                </div>            
+                <div class="item certificates__owl__item">
+                    <img class="certificates__image" src="./assets/image/bootcamptakeblip.jpg" alt="">
+                </div>            
+                <div class="item certificates__owl__item">
+                    <img class="certificates__image" src="./assets/image/bootcamptakeblip.jpg" alt="">
+                </div>            
+                <div class="item certificates__owl__item">
+                    <img class="certificates__image" src="./assets/image/bootcamptakeblip.jpg" alt="">
+                </div>            
+                <div class="item certificates__owl__item">
+                    <img class="certificates__image" src="./assets/image/bootcamptakeblip.jpg" alt="">
+                </div>            
+            </div>                       
         </section>     
         <section class="projects">
             <h3 class="projects__title">Principais Projetos</h3>
@@ -102,7 +116,20 @@
                 <li class="projects__item">
                     <h4 class="projects__item__title">The Books</h4>
                     <span class="projects__item__text">Projeto feito junto ao Bootcamp da Digital Innovation One. Um clone da Netflix com a proposta de uma plataforma de audiobooks</span>
-                    <button class="projects__item__button"><a href="#" class="projects__item__link">Github</a></button>
+                    <ul class="projects__list__actions">
+                        <li class="projects__list__actions__item">
+                            <a class="projects__actions__link" href="#">
+                                GitHub
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="projects__list__actions__item">
+                            <a class="projects__actions__link" href="#">
+                                Website
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </a>
+                        </li>
+                    </ul>
                     <ul class="tech__list">
                         <li class="tech__item">HTML</li>
                         <li class="tech__item">CSS</li>
@@ -110,10 +137,15 @@
                         <li class="tech__item">JQuery</li>
                     </ul>
                 </li>                
-            </ul>
-        </section>
-    </main>
+            </ul>           
+        </section>  
+    </main>    
+    <!-- Owl -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Typed -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Js -->
     <script src="./assets/js/script.js"></script>   
 </body>
 </html>

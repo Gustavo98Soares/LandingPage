@@ -35,7 +35,6 @@ body{
    color:#ff79c6;
    background:var(--current-line);
    height: 80px;
-   border: 2px solid var(--comment);
 }
 
 .title{
@@ -60,6 +59,9 @@ body{
 
 .main{
    padding: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
 }
 
 /*--------------- Skills -----------------*/
@@ -72,20 +74,17 @@ body{
    color: var(--pink);
 }
 
-
-.skills__list{
-   display: flex;
-    height: 200px;
-    justify-content: space-around;
+.skills__owl{
+    height: 250px;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
     margin-top: 6px;
-    overflow-x: scroll;
-    border: 2px solid var(--comment);
     background: var(--current-line);
     border-radius: 20px;
 }
 
-.skills__item{
+.skills__owl__item{
    width: 300px;
    height: 100%;
    display: flex;
@@ -94,6 +93,7 @@ body{
    flex-direction: column;
    align-items: center;
    justify-content: flex-start;
+   color: var(--green);
 }
 
 .fa-js-square{
@@ -117,7 +117,6 @@ body{
 .studies__list{
    display: flex;
    justify-content: space-around;
-   overflow-x: scroll;
   
 }
 
@@ -125,26 +124,27 @@ body{
    display: flex;
    flex-direction: column;
    align-items: center;
+   color: var(--green);
 }
 /*--------------- Certificates ------------------*/
+
+.certificates{
+   width: 100%;
+}
 
 .certificates__title{
    color: var(--pink);
 }
-
-.certificates__list{
-   display: flex;
-   gap: 50px;
-   overflow-y: scroll;
+.certificates__owl__item{
+   border: 8px solid var(--current-line);  
 }
 
-.certificates__item{
-   border: 8px solid red;
-
+.certificates__owl__item{
+   max-width: 800px;
 }
 
 .certificates__image{
-   height: 500px;
+   height:550px;
 }
 
 /*-------------------- Projects ------------------------*/
@@ -159,11 +159,14 @@ body{
    height: 250px;
 }
 
+.projects__item__title{
+   color: var(--green);
+}
+
 .projects__item{
    display: flex;
    flex-direction: column;
    width: 300px;
-   border: 2px solid var(--comment);
    background: var(--current-line);
    border-radius: 20px;
    padding: 10px;
@@ -173,8 +176,30 @@ body{
 
 .tech__list{
    display: flex;
+   justify-content: space-between;
 }
 
 .tech__item{
    color: var(--yellow);
+}
+
+.projects__list__actions{
+   display: flex;
+   gap: 10px;
+   justify-content: space-around;
+}
+
+.projects__actions__link{
+   color: var(--purple);
+}
+
+.projects__actions__link:hover{
+   color: var(--orange);
+}
+
+/* ---------------------------- Owl ---------------------------------------- */
+
+.owl-carousel.owl-loaded{
+   display: flex;
+   flex-direction: column;
 }
