@@ -1,6 +1,6 @@
 *{
    font-family: 'Roboto', sans-serif;
-   color: var(--Foreground);
+   color: var(--text);
 }
 
 body{
@@ -12,18 +12,22 @@ body{
 :root{
    /* Dracula */
    --background:#282a36;
-   --current-line:#44475a;
-   --Foreground:#f8f8f2;
+   --background-secondary:#44475a;
+   --text:#f8f8f2;
    --comment:#6272a4;
-   --cyan:#8be9fd;
-   --green:#50fa7b;
-   --orange:#ffb86c;
-   --pink:#ff79c6;
-   --purple:#bd93f9;
-   --red:#ff5555;
-   --yellow:#f1fa8c;
+   --text-subtitle:#50fa7b;
+   --text-link-hover:#ffb86c;
+   --text-title:#ff79c6;
+   --text-link:#f1fa8c;
 }
 
+/* Themes */
+
+body[data-theme = "t-playstation"]{
+   --background: #f5f5f5;
+   --pink:#DF0024;
+
+}
 
 /* Header */
 
@@ -32,36 +36,52 @@ body{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   color:#ff79c6;
-   background:var(--current-line);
+   color:var(--text-link);
+   background:var(--background-secondary);
    height: 80px;
 }
 
-.title{
-   color: var(--pink);
-   
-}
 
 .list__item--link{
-   color: #f1fa8c;
+   color: var(--text-link);
    transition: all .3s ease-in-out;
 }
 
 .list__item--link:hover{
-   color: #ccda37;
+   color: var(--text-link-hover);
 }
 
 .list__item--link:not(:first-child){
    margin-left: 20px;
 }
 
+.menu__list{
+   display: flex;
+   align-items: center;
+}
+
+.button-theme img{
+   width: 80px;
+}
+
 /*-------------- Main -----------------*/
 
 .main{
-   padding: 10px;
    display: flex;
    flex-direction: column;
    gap: 30px;
+}
+
+/*-------------- Section One -------------*/
+
+.section-one{
+   padding: 20px;
+}
+
+/*-------------- About -------------------*/
+
+.about-title{
+   display: flex;
 }
 
 /*--------------- Skills -----------------*/
@@ -71,7 +91,7 @@ body{
 }
 
 .skills__title{
-   color: var(--pink);
+   color: var(--text-title);
 }
 
 .skills__owl{
@@ -80,7 +100,6 @@ body{
     justify-content: center;
     gap: 8px;
     margin-top: 6px;
-    background: var(--current-line);
     border-radius: 20px;
 }
 
@@ -93,7 +112,7 @@ body{
    flex-direction: column;
    align-items: center;
    justify-content: flex-start;
-   color: var(--green);
+   color: var(--text-subtitle);
 }
 
 .fa-js-square{
@@ -108,13 +127,18 @@ body{
    color: #264de4;
 }
 
+/*------------------- Section two ----------------*/
+.section-two{
+   background: var(--background-secondary);
+   padding: 20px;
+}
 /*------------------- Studies --------------------*/
 
 .studies__title{
-   color: var(--pink);
+   color: var(--text-title);
 }
 
-.studies__list{
+.studies__owl{
    display: flex;
    justify-content: space-around;
   
@@ -124,7 +148,7 @@ body{
    display: flex;
    flex-direction: column;
    align-items: center;
-   color: var(--green);
+   color: var(--text-subtitle);
 }
 /*--------------- Certificates ------------------*/
 
@@ -133,10 +157,10 @@ body{
 }
 
 .certificates__title{
-   color: var(--pink);
+   color: var(--text-title);
 }
 .certificates__owl__item{
-   border: 8px solid var(--current-line);  
+   border: 8px solid var(--background-secondary);  
 }
 
 .certificates__owl__item{
@@ -147,10 +171,16 @@ body{
    height:550px;
 }
 
+/*-------------------- Section three -------------------*/
+
+.section-three{
+   padding: 20px;
+}
+
 /*-------------------- Projects ------------------------*/
 
 .projects__title{
-   color: var(--pink);
+   color: var(--text-title);
 }
 
 .projects__list{
@@ -160,14 +190,14 @@ body{
 }
 
 .projects__item__title{
-   color: var(--green);
+   color: var(--text-subtitle);
 }
 
 .projects__item{
    display: flex;
    flex-direction: column;
    width: 300px;
-   background: var(--current-line);
+   background: var(--background-secondary);
    border-radius: 20px;
    padding: 10px;
    gap: 10px;
@@ -180,7 +210,7 @@ body{
 }
 
 .tech__item{
-   color: var(--yellow);
+   color: var(--text-subtitle);
 }
 
 .projects__list__actions{
@@ -190,11 +220,11 @@ body{
 }
 
 .projects__actions__link{
-   color: var(--purple);
+   color: var(--text-link);
 }
 
 .projects__actions__link:hover{
-   color: var(--orange);
+   color: var(--text-link-hover);
 }
 
 /* ---------------------------- Owl ---------------------------------------- */
